@@ -1,0 +1,444 @@
+@font-face {
+    font-family: Minecraft;
+    src: url(MinecraftTen-VGORe.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300&display=swap');
+body,
+html {
+    background-color: #000000;
+    font-family: 'Minecraft', sans-serif;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.3%;
+    background: #000000;
+    color: #55ff55;
+    padding: 20px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.menu-logo {
+    line-height: 0;
+    margin: 0 20px;
+}
+
+.menu-logo img {
+    max-height: 50px;
+    max-width: 100px;
+    flex-shrink: 0;
+}
+
+.menu-container a {
+    text-decoration: none;
+    color: #000000;
+    transition: color 0.3s ease;
+}
+
+.menu-container a:hover {
+    color: #ee6352;
+}
+
+.menu-container input {
+    display: block;
+    width: 35px;
+    height: 25px;
+    margin: 0;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    /* hide this */
+    z-index: 2;
+    /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+}
+
+
+/* Burger menu */
+
+.menu-container span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #55ff55;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+.menu-container span:first-child {
+    transform-origin: 0% 0%;
+}
+
+.menu-container span:nth-child(3) {
+    transform-origin: 0% 100%;
+}
+
+.menu-container input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(3px, -1px);
+    background: #000000;
+}
+
+.menu-container input:checked~span:nth-child(4) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.menu-container input:checked~span:nth-child(3) {
+    transform: rotate(-45deg) translate(-5px, 11px);
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu li {
+    padding: 5px 0px;
+    font-size: 22px;
+}
+
+.bannner-img {
+    width: 100%;
+    height: auto;
+    -webkit-animation: fade-in 1.2s cubic-bezier(.39, .575, .565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(.39, .575, .565, 1.000) both;
+}
+
+.col-text {
+    height: 40em;
+}
+
+.grid-flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    flex-direction: row;
+    -webkit-flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -webkit-justify-content: space-around;
+}
+
+.col {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.col-left {
+    -webkit-box-ordinal-group: -1;
+    -webkit-order: -1;
+    -ms-flex-order: -1;
+    order: -1;
+}
+
+.col-text {
+    -webkit-animation: fade-in 1.2s cubic-bezier(.39, .575, .565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(.39, .575, .565, 1.000) both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-image:hover {
+    -webkit-transform: scale(1.05);
+    -webkit-transition: all 0.6s ease-in-out;
+}
+
+.Aligner-item {
+    width: 80%;
+}
+
+.h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.shapeim {
+    width: 100%;
+    height: auto;
+}
+
+.col-image {
+    border-radius: 10px;
+    margin-top: 100px;
+    margin-left: 100px;
+    margin-right: 100px;
+    background-size: cover;
+    background-position: center center;
+    -webkit-animation: fade-in 1.2s cubic-bezier(.39, .575, .565, 1.000) both;
+    animation: fade-in 1.2s cubic-bezier(.39, .575, .565, 1.000) both;
+}
+
+.w-100 {
+    display: block;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 100px;
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    width: 50%;
+    height: 800px;
+    background-image: linear-gradient(163deg, #00ff75 0%, #3700ff 100%);
+    border-radius: 30px;
+    transition: all .8s;
+}
+
+.card2 {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border-radius: 26px;
+    transition: all .8s;
+}
+
+.buy {
+    font-size: 30px;
+    letter-spacing: 2px;
+    padding-top: 40%;
+    text-align: center;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+}
+
+.card2:hover {
+    transform: scale(0.97);
+    border-radius: 20px;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
+}
+
+::-webkit-scrollbar {
+    transition: color 0.3s ease;
+    width: 10px;
+    height: 10px;
+}
+
+ ::-webkit-scrollbar-button {
+    transition: color 0.3s ease;
+    width: 25px;
+    height: 20px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    transition: color 0.3s ease;
+    background: #55ff55;
+    border-radius: 25px;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #ee6352;
+}
+
+ ::-webkit-scrollbar-thumb:active {
+    background: #ee6352;
+}
+
+ ::-webkit-scrollbar-track {
+    transition: color 0.3s ease;
+    background: transparent;
+    border-radius: 46px;
+}
+
+ ::-webkit-scrollbar-track:hover {
+    background: transparent;
+}
+
+ ::-webkit-scrollbar-track:active {
+    background: transparent;
+}
+
+ ::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+
+/* mobile styles */
+
+@media only screen and (max-width: 1000px) {
+    .col-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card {
+        width: 100%;
+    }
+    .button {
+        margin-right: 10%;
+        margin-left: 10%;
+        width: 20%;
+        height: 20px;
+        font-size: 18px;
+    }
+    .menu-container {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    .menu-logo {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .menu-logo img {
+        max-height: 30px;
+    }
+    .menu {
+        border-radius: 5px;
+        position: absolute;
+        box-sizing: border-box;
+        width: 250px;
+        right: -250px;
+        top: 0;
+        margin: -10px;
+        padding: 50px 0px 20px;
+        background: #55ff55;
+        -webkit-font-smoothing: antialiased;
+        /* to stop flickering of text in safari */
+        transform-origin: 0% 0%;
+        transform: translateX(0%);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    }
+    .menu-container input:checked~.menu {
+        transform: translateX(-100%);
+    }
+    .container {
+        margin-top: 10px;
+    }
+    .person {
+        width: 100%;
+    }
+    .banner-1-h1 {
+        font-size: 50px;
+    }
+    .banner-1-p {
+        font-size: 17px;
+    }
+    .Aligner-item {
+        width: 100%;
+    }
+    .p {
+        font-size: 15px;
+    }
+    .h1 {
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .grid-flex {
+        height: 40em;
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+    .col {
+        order: vertical;
+    }
+    .col-left {
+        -webkit-box-ordinal-group: 0;
+        -webkit-order: 0;
+        -ms-flex-order: 0;
+        order: 0;
+    }
+    .col-text div p {
+        padding: 1em;
+    }
+    .Aligner-item {
+        width: 100%;
+    }
+    .p {
+        font-size: 15px;
+    }
+    .h1 {
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+}
+
+
+/* Desktop styles */
+
+@media only screen and (min-width: 1001px) {
+    .menu-container {
+        width: 100%;
+    }
+    .menu-container a {
+        color: #55ff55;
+    }
+    .menu-container input {
+        display: none;
+    }
+    /* Burger menu */
+    .menu-container span {
+        display: none;
+    }
+    .menu {
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .menu ul {
+        display: flex;
+        padding: 0;
+    }
+    .menu li {
+        padding: 0 20px;
+    }
+}
+
+@-webkit-keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
+}
