@@ -30,6 +30,6 @@ jQuery.fn.niceScroll = function() {
 $('.scroll').niceScroll();
 
 function showAlert() {
-    var myText = "Our Server IP is: " + "COMING SOON!";
+    var myText = "Our Server IP is: " + "smptss.ddns.net";
     alert(myText);
 }
